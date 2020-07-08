@@ -24,7 +24,7 @@ class UI {
       <td>${book.title}</td>
       <td>${book.author}</td>
       <td>${book.isbn}</td>
-      <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
+      <td><a href="#book-form" class="btn btn-danger btn-sm delete">X</a></td>
     `;
 
     list.appendChild(row);
@@ -104,7 +104,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   if (title === '' || author === '' || isbn === '') {
     UI.showAlert('Please fill in all fields', 'danger');
   } else {
-    // Instatiate book
+    // Instantiate book
     const book = new Book(title, author, isbn);
 
     // Add Book to UI
